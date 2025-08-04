@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Dog - Cuidado, Carinho e Confiança para seu Pet em Salvador</title>
+    <meta name="description" content="Passeadores e Pet Sitters em Salvador. Oferecemos passeios seguros e cuidados responsáveis para que seu coração fique tranquilo e seu melhor amigo feliz.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* CSS Reset e Nova Paleta de Cores */
+        :root {
+            --cor-solar-destaque: #FDB813;  /* Amarelo da logo */
+            --cor-confianca-principal: #2E3D4F; /* Azul escuro da logo */
+            --cor-fundo: #FFFFFF;
+            --cor-texto: #333333;
+            --cor-texto-claro: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Seção Herói (Nova) */
+        .hero {
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--cor-texto-claro);
+            
+            /* IMAGEM DE FUNDO - Substitua pelo link da sua imagem */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1974&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+        
+        .hero .logo {
+            width: 180px;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5)); /* Sombra para destacar no fundo */
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 15px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        }
+
+        /* Seção Padrão (para Missão, etc.) */
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: var(--cor-confianca-principal);
+        }
+
+        .pilares {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .pilar {
+            background-color: #F9F9F9;
+            padding: 40px 30px;
+            border-radius: 10px;
+            border: 1px solid #EEE;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .pilar:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(46, 61, 79, 0.1);
+        }
+
+        .pilar i {
+            font-size: 2.5em;
+            color: var(--cor-solar-destaque);
+            margin-bottom: 20px;
+        }
+
+        .pilar h3 {
+            font-size: 1.5em;
+            color: var(--cor-confianca-principal);
+            margin-bottom: 10px;
+        }
+
+        /* Galeria de Imagens (Nova) */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(46, 61, 79, 0.15);
+            transition: transform 0.3s ease;
+        }
+        .galeria img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Seção de Chamada para Ação (CTA) */
+        .cta-section {
+            background-color: var(--cor-confianca-principal);
+            color: var(--cor-texto-claro);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: var(--cor-texto-claro);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            min-width: 300px;
+        }
+        
+        .whatsapp {
+            background-color: #25D366;
+            color: #FFFFFF;
+        }
+        .whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+        }
+
+        .instagram {
+            background-color: var(--cor-solar-destaque);
+            color: var(--cor-confianca-principal);
+        }
+        .instagram:hover {
+            background-color: #eab00f;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+        }
+        
+        /* Media Queries para Responsividade */
+        @media (min-width: 768px) {
+            .hero h1 { font-size: 4em; }
+            .pilares { grid-template-columns: repeat(3, 1fr); }
+            .cta-buttons { flex-direction: row; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <img src="Logo Final_2.png" alt="Logo Dom Dog" class="logo">
+            <h1>Muito amor envolvido!</h1>
+            <p>Aproveite a tranquilidade de saber que seu amigão receberá sempre todo carinho, atenção e cuidado que merece.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2>Nossos Pilares</h2>
+                <div class="pilares">
+                    <article class="pilar">
+                        <i class="fa-solid fa-heart"></i>
+                        <h3>Nossa Missão</h3>
+                        <p>Garantir a felicidade e o bem-estar dos pets através de passeios e cuidados responsáveis, oferecendo tranquilidade e confiança total aos seus tutores.</p>
+                    </article>
+
+                    <article class="pilar">
+                        <i class="fa-solid fa-rocket"></i>
+                        <h3>Nossa Visão</h3>
+                        <p>Ser a referência em Salvador no cuidado com pets, reconhecida pelo amor, pela excelência e pela forte parceria de confiança com cada família que atendemos.</p>
+                    </article>
+
+                    <article class="pilar">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Nossos Valores</h3>
+                        <p>Amor incondicional pelos animais, responsabilidade máxima com a segurança, transparência total com os tutores e empatia em cada interação.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Momentos que Falam por Nós</h2>
+                <div class="galeria">
+                    <img src="https://images.unsplash.com/photo-1597626244043-986157f7f2cb?q=80&w=1974&auto=format&fit=crop" alt="Cuidador sorrindo para um cão feliz">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1924&auto=format&fit=crop" alt="Close-up de um cão da raça golden retriever sorrindo">
+                    <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=80&w=1954&auto=format&fit=crop" alt="Cão pequeno sendo cuidado com carinho">
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Pronto para começar essa parceria?</h2>
+                <div class="cta-buttons">
+                    <a href="https://api.whatsapp.com/send?phone=5571000000000&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Dom%20Dog." target="_blank" class="cta-button whatsapp">
+                        <i class="fab fa-whatsapp"></i> Fale Conosco no WhatsApp
+                    </a>
+                    <a href="https://www.instagram.com/DomDog" target="_blank" class="cta-button instagram">
+                        <i class="fab fa-instagram"></i> Siga-nos no Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dom Dog. Todos os direitos reservados. Cuidado e carinho em Salvador, Bahia.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
